@@ -50,7 +50,7 @@ static void __exit hack_exit(void) {
   syscall_table[__NR_clone] = (long unsigned int)original_clone;
   set_addr_ro((unsigned long)syscall_table);
 
-  printk(KERN_INFO "exit init syscall hack module");
+  printk(KERN_INFO "exit syscall hack module");
 }
 
 module_init(hack_init);
